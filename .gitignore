@@ -1,5 +1,6 @@
 README.md
 .editorconfig
+/database/*
 
 # Global files
 *.zip
