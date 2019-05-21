@@ -97,12 +97,10 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	// --------------------------------------------------------------------
 
-	/**
-	 * Class constructor
-	 *
-	 * @param	array	$params
-	 * @return	void
-	 */
+
+	 @param	array	$params
+	 @return	void
+	 
 	public function __construct($params)
 	{
 		parent::__construct($params);
@@ -115,12 +113,10 @@ class CI_DB_mysql_driver extends CI_DB {
 
 	// --------------------------------------------------------------------
 
-	/**
-	 * Non-persistent database connection
-	 *
-	 * @param	bool	$persistent
-	 * @return	resource
-	 */
+	
+	  @param	bool	$persistent
+	@return	resource
+	 
 	public function db_connect($persistent = FALSE)
 	{
 		$client_flags = ($this->compress === FALSE) ? 0 : MYSQL_CLIENT_COMPRESS;
