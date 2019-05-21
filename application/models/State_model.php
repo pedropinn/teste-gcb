@@ -18,7 +18,7 @@
 		$states = $this -> getAll();
 
 		foreach($states -> result() as $state) {
-			$options .= "<option value='{$state->Id}'>{$state->Nome}</option>";
+			$options .= "<option value='{$state->Uf}'>{$state->Nome}</option>".PHP_EOL;
 		}
 		return $options;
 	}

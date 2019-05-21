@@ -4,16 +4,21 @@
 	}
 
 	 // Traz todos as cidades cadastradas do estado selecionado.
-	public function getCityByStates($CodigoUF = null) {
+	public function getCityByStates($Uf = null) {
 		return $this->db
-		->where("Codigo", $CodigoUF)
+		->where("Uf", $Uf)
 		->order_by('Nome')
 		->get('city');
 	}
 
-	public function selectCity()
-	{
-		
+	// Cria select de options com cidades selecionadas. 
+	public function selectCitys($Uf = null){
+		$citys = $this ->getCityByStates($Uf);
+		$options = "<option>Selecione a cidade</option>";
+		foreach($citys -> result() as $city) {
+			$options .= "<option value='{$city->Uf}'>$city->Nome</option>".PHP_EOL;
+		}
+		return $options;
 	}
 
 

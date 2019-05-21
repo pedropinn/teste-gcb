@@ -9,8 +9,8 @@ class City extends CI_Controller {
 	public function getCitys()
 	{   
 		$this -> load -> model('City_model');
-		$CodigoUf = $this->input->post('CodigoUf');
-		echo $this->City_model->selectCity($CodigoUf);
+		$Uf = $this->input->post('Uf');
+		echo $this->City_model->selectCitys($Uf);
 
 
 	}
