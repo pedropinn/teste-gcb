@@ -1,1 +1,1 @@
-<h1>cadastrado com sucesso</h1>
+<h1 class="text-center">Cadastrado com sucesso.</h1>
