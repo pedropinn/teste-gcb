@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Maio-2019 às 14:02
+-- Generation Time: 22-Maio-2019 às 16:26
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -5621,22 +5621,56 @@ INSERT INTO `city` (`Id`, `Codigo`, `Nome`, `Uf`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `doctors` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Id` int(5) NOT NULL AUTO_INCREMENT,
   `Crm` varchar(13) NOT NULL,
   `Name` varchar(40) NOT NULL,
-  `Phone` char(13) NOT NULL,
+  `Phone` varchar(13) NOT NULL,
   `State` varchar(20) DEFAULT NULL,
   `City` varchar(35) DEFAULT NULL,
+  `Skill1` varchar(26) CHARACTER SET armscii8 DEFAULT NULL,
+  `Skill2` varchar(26) CHARACTER SET armscii8 DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Crm` (`Crm`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Extraindo dados da tabela `doctors`
 --
 
-INSERT INTO `doctors` (`Id`, `Crm`, `Name`, `Phone`, `State`, `City`) VALUES
-(1, '0000000000/SP', 'Nome Do Médico ', '11-99999-9999', 'São Paulo', 'São Paulo');
+INSERT INTO `doctors` (`Id`, `Crm`, `Name`, `Phone`, `State`, `City`, `Skill1`, `Skill2`) VALUES
+(1, '0000000000/SP', 'Nome Do Médico ', '11-99999-9999', 'São Paulo', 'São Paulo', 'Buco Maxilo', 'Clinica Medica');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `skills`
+--
+
+CREATE TABLE IF NOT EXISTS `skills` (
+  `Id` int(2) NOT NULL AUTO_INCREMENT,
+  `Skill` varchar(26) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5573 ;
+
+--
+-- Extraindo dados da tabela `skills`
+--
+
+INSERT INTO `skills` (`Id`, `Skill`) VALUES
+(1, 'Alergologia'),
+(2, 'Angiologia'),
+(3, 'Buco Maxilo'),
+(4, 'Cardiologia Clinica'),
+(5, 'Cardiologia Infantil'),
+(6, 'Cirurgia Cabeça E Pescoço'),
+(7, 'Cirurgia Cardíaca'),
+(8, 'Cirurgia De Torax'),
+(10, 'Cirurgia Geral'),
+(11, 'Cirurgia Pediátrica'),
+(12, 'Cirurgia Plástica'),
+(13, 'Cirurgia Torácica'),
+(14, 'Cirurgia Vascular'),
+(15, 'Clinica Medica');
 
 -- --------------------------------------------------------
 
