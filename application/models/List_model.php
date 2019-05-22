@@ -3,7 +3,7 @@
 		parent::__construct();
 	}
 
-	 // Traz todos os médicos
+	 //recebe todas as informações cadastradas em doctors.
 	public function getAllDoctors() {
 		return $this->db
 		->get("doctors")->result_array();

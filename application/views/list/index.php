@@ -19,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<th> Telefone </th>
 				<th> Estado </th>
 				<th> Cidade </th>
+				<th> Especialidade(s) </th>
 			</tr>			
 			<?php foreach ($doctors as $doctor) : ?>
 				<tr>
@@ -27,9 +28,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<td> <?= $doctor['Phone'] ?></td>
 					<td> <?= $doctor['State'] ?></td>
 					<td> <?= $doctor['City'] ?></td>
+					<td> <?= $doctor['Skill1'] ?>, <?= $doctor['Skill2']  ?></td>
 				</tr>
 			<?php endforeach ?>
 		</table>
-		<?= anchor('RegisterDoctor/new', 'Novo Cadastro', array('class' => 'btn btn-success')); ?>
+		<div class="row">
+			<div class="col"  style="width: 200px;">
+			<?= anchor('RegisterDoctor/new', 'Cadastrar', array( 
+					'class' => 'btn btn-success btn-lg btn-block',
+					
+					));
+				?></div>
+			<div class="col-8"></div>
+			<div class="col"  style="width: 200px;">
+				</div>
 	</body>
 </html>

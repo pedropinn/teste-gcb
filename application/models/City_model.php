@@ -11,7 +11,7 @@
 		->get('city');
 	}
 
-	// Cria select de options com cidades selecionadas. 
+	// Cria select com cidades do estado selecionado. 
 	public function selectCitys($Uf = null){
 		$citys = $this ->getCityByStates($Uf);
 		$options = "<option>Selecione a cidade</option>";

@@ -11,7 +11,7 @@
 	}
 	
 
-	// Cria select de options com estados. 
+	// Cria select com estados. 
 	public function selectStates()
 	{
 		$options = "<option value=''>Selecione o estado</option>";
@@ -23,10 +23,27 @@
 		return $options;
 	}
 
-	public function getAllDoctors() {
-		return $this->db
-		->get("doctors")->result_array();
-	}
-	
 
-}
+		 // Traz todos as proficiencias cadastrados ordenado por nome.
+		 public function getAllSkills() {
+			return $this->db
+			->order_by('Skill')
+			->get('skills');
+		}
+		
+	
+		// Cria select com skills. 
+		public function selectSkiils()
+		{
+			$options = "<option value=''>Selocione especialidade</option>";
+			$skill = $this -> getAllSkills();
+	
+			foreach($skill -> result() as $skills) {
+				$options .= "<option value='{$skills->Id}'>{$skills->Skill}</option>".PHP_EOL;
+			}
+			return $options;
+		}
+	
+	}
+		
+
