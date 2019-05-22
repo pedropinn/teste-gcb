@@ -30,12 +30,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<h1 class="text-center"> Registro Médico</h1>
 <div class="container">
-<form style="width:100%">	
+<form method="POST" action="Sucess.php" >	
 	<div class="row">
 		<?php echo form_label("Nome");
 		echo form_input( array(
 			'name'=> 'Nome',
 			'type' => 'Nome',
+			'set_value' => 'Nome',
 			'id' => 'inputNome',
 			'class' => 'form-control',
 			'maxlength'   => '40',
@@ -48,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php echo form_label("CRM");
 		echo form_input( array(
 			'name'=> 'Crm',
+			'set_value' => 'Crm',
 			'type' => 'Crm',
 			'id' => 'inputCrm',
 			'class' => 'form-control',
@@ -62,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		echo form_input( array(
 			'name'=> 'Phone',
 			'type' => 'Phone',
+			'set_value' => 'Phone',
 			'id' => 'inputPhone',
 			'class' => 'form-control',
 			'maxlength'   => '10',
@@ -72,14 +75,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 		<div class="row">
 			<label for="state">Estado</label>
-			<select id="state" name="state" class="form-control">
+			<select id="state" name="state" class="form-control" set_value="State">
 			<?php echo $options_states ?> 
 			</select>
 		</div>	
 		<div class="row">
 			<label fot="city">Cidade</label>
-			<select id="city" name="city" class="form-control"><option>Primeiro selecione o estado</option></select>
+			<select id="city" name="city" class="form-control"  set_value="City"><option>Primeiro selecione o estado</option></select>
 		</div>
+		
 	<br />
 		<div class="row">
 			<div class="mx-auto" style="width: 200px;">
@@ -87,10 +91,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					"type" => "submit",
 					"class" => "btn btn-outline-primary btn-lg btn-block",
 					"content" => "Cadastrar",
+					"set_value" => "Insert"
 				));
 				?> 
 			</div>
-		</div>
 
+		</div>
+		</form>
 </body>
 </html>
