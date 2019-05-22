@@ -64,28 +64,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		?>
 	
 		 	<div class=row> 
-				<div class="col"> 	 
+				<div class="col-3"> 	 
 			<label for="state">Estado</label>
 			<select id="State" name="state" class="form-control" set_value="State">
 			<?php echo $options_states ?> 
 			</select>
 				</div>
-				<div class="col"> 
+				<div class="col-3"> 
 			<label fot="city">Cidade</label>
 			<select id="City" name="city" class="form-control"  set_value="City"><option>Primeiro selecione o estado</option></select>
-			<br />
+			
 				</div>
-			</div>
-
-			<div class=row> 
-				<div class="col"> 	 
-			<label for="Skill1">Selecione Especialidades</label>
+			 
+				<div class="col-3"> 	 
+			<label for="Skill1">Selecione Especialidade</label>
 			<select id="Skill" name="Skill1" class="form-control" set_value="Skill1">
 			<?php echo $options_skills ?> 
 			</select>
 				</div>
-				<div class="col"> 
-				<label for="skill2">Selecione Especialidades - 2</label>
+				<div class="col-3"> 
+				<label for="skill2">Selecione Especialidade nº2</label>
 			<select id="Skill2" name="Skill2" class="form-control" set_value="Skill2">
 			<?php echo $options_skills ?> 
 			</select>

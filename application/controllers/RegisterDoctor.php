@@ -10,7 +10,7 @@ class RegisterDoctor extends CI_Controller {
 				$data = [ 'options_states' => $this -> State_model -> selectStates(),
 				'options_skills' => $this -> State_model -> selectSkiils() ];
 				
-				//Executa view register/index recebendo variavel com estados do bando de dados.
+				//Executa view register/index recebendo informações do bando de dados.
 				$this->load->view('register/index', $data);
 
 				} 

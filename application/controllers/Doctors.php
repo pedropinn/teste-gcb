@@ -11,6 +11,12 @@ class Doctors extends CI_Controller {
 			$this->load->view('list/index', $data);
 		} 
 		
+		public function delete(){
+			$this->load->model("List_model");
+			$list = $this-> List_model -> getAllDoctors();
+			$data = array("doctors" => $list);
+			$this->load->view('list/delete', $data);
+		} 
 		
 }
 		

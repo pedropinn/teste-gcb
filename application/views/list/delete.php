@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	
 	<div class='container'>
-		<h1 class='text-center'> Lista médicos</h1>
+		<h1 class='text-center'> Selecione o médico para deletar</h1>
 		<table class='table'>
 			<tr>
 				<th> Nome </th>
@@ -34,16 +34,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</table>
 		<div class="row">
 			<div class="col"  style="width: 200px;">
-			<?= anchor('RegisterDoctor/new', 'Cadastrar', array( 
+			<?= anchor('Doctors/list', 'Voltar', array( 
 					'class' => 'btn btn-success btn-lg btn-block',
 					
 					));
 				?></div>
 			<div class="col-8"></div>
 			<div class="col"  style="width: 200px;">
-			<?= anchor('Doctors/delete', 'Editar', array( 
-					'class' => 'btn btn-danger btn-lg btn-block',)
-			); ?>
 				</div>
 	</body>
 </html>
