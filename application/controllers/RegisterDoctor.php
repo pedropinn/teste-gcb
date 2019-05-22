@@ -21,7 +21,7 @@ class RegisterDoctor extends CI_Controller {
 				public function save(){
 					$doctor = array(
 						"Crm" => $this->input->post("Crm"),
-						"Name" => $this->input->post("Nome"),
+						"Name" => $this->input->post("Name"),
 						"Phone" => $this->input->post("Phone"),
 						"State" => $this->input->post("State"),
 						"City" => $this->input->post("City")
@@ -29,7 +29,8 @@ class RegisterDoctor extends CI_Controller {
 	
 					$this->load->model("Post_model");
 					$this->Post_model->saveDoctor($doctor);
-					$this->load->view('register/registered');
+					$this->load->view('register/sucess');
+					$this->new();
 				} 
 				
 		

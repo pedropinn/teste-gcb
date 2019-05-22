@@ -11,13 +11,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script type="text/javascript">
 	var base_url = "<?php echo base_url() ?>";
 		$(function(){
-			$("#state").change(function(){
-				$('#city').html("<option>Carregando...</option>");
-				var Uf = $('#state').val();
+			$("#State").change(function(){
+				$('#City').html("<option>Carregando...</option>");
+				var Uf = $('#State').val();
 				$.post(base_url+'index.php/ajax/city/getCitys', {
 					Uf : Uf
 				}, function(data){
-					$('#city').html(data);
+					$('#City').html(data);
 				}
 				);
 			});
@@ -27,13 +27,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<h1 class="text-center"> Registro Médico</h1>
 <div class="container">
-		<?php echo form_open('/controllers/registered');
+		<?php echo form_open('RegisterDoctor/save');
 			echo form_label("Nome");
 			echo form_input( array(
 				'name'=> 'Name',
 				'type' => 'Name',
 				'set_value' => 'Name',
-				'id' => 'inputNome',
+				'id' => 'Name',
 				'class' => 'form-control',
 				'maxlength'   => '40',
 				'aria-describedby' => 'nameHelp',
@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				'name'=> 'Crm',
 				'set_value' => 'Crm',
 				'type' => 'Crm',
-				'id' => 'inputCrm',
+				'id' => 'Crm',
 				'class' => 'form-control',
 				'maxlength'   => '13',
 				'aria-describedby' => 'crmHelp',
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				'name'=> 'Phone',
 				'type' => 'Phone',
 				'set_value' => 'Phone',
-				'id' => 'inputPhone',
+				'id' => 'Phone',
 				'class' => 'form-control',
 				'maxlength'   => '10',
 				'aria-describedby' => 'phoneHelp',
@@ -65,22 +65,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	
 			<label for="state">Estado</label>
-			<select id="state" name="state" class="form-control" set_value="State">
+			<select id="State" name="state" class="form-control" set_value="State">
 			<?php echo $options_states ?> 
 			</select>
 	
 	
 			<label fot="city">Cidade</label>
-			<select id="city" name="city" class="form-control"  set_value="City"><option>Primeiro selecione o estado</option></select>
-		
-		
-	<br />
+			<select id="City" name="city" class="form-control"  set_value="City"><option>Primeiro selecione o estado</option></select>
+			<br />
 			<div class="mx-auto" style="width: 200px;">
-			<?= anchor('RegisterDoctor/save', 'Novo Cadastro', array('class' => 'btn btn-outline-success btn-lg btn-block')); ?> 
+			<?php echo form_button(array(
+				'class' => 'btn btn-outline-success btn-lg btn-block',
+				"type" => "submit",
+				"content" => "Cadastrar"
+
+			)); ?>
+	
+			
+		  
 		</div>
 		<?= form_close(); ?>
 	
-
+		
 
 
 
