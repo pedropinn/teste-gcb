@@ -22,4 +22,11 @@
 		}
 		return $options;
 	}
+
+	public function getAllDoctors() {
+		return $this->db
+		->get("doctors")->result_array();
+	}
+	
+
 }
