@@ -5,7 +5,7 @@ class City extends CI_Controller {
 		parent::__construct();
 	}
 
-
+//recebe dados do db e atribui a array
 	public function getCitys()
 	{   
 		$this -> load -> model('City_model');

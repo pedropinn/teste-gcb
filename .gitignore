@@ -1,8 +1,5 @@
 DEPENDENCIAS.md
 .editorconfig
-/database/*
-.trash
-.Register
 # Global files
 *.zip
 .svn

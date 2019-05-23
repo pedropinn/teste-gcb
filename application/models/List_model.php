@@ -9,5 +9,14 @@
 		->get('doctors')->result_array();
 	}
 	
+	public function search($doctor){
+		if (empty($doctor))
+		return array();
+
+	$doctor = $this->input->post('search');
+	$this->db->like('Name', $doctor);
+	$query = $this->db->get('doctors');
+	return $query->result_array();
+ }
 
 }
