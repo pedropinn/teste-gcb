@@ -16,7 +16,7 @@ Desenvolvido com PHP 7.3.5, utilizando framework CodeIgniter-3.1.10, MySql, Ajax
 
 >Criar e inciar o servidor, com base no arquivo **doctorregister.sql**
 >- Usurname: root
->- Passwordd:
+>- Password:
 >- Port: 3306
 
   

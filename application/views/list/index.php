@@ -32,16 +32,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</tr>
 			<?php endforeach ?>
 		</table>
-		<div class="row">
-			<div class="col"  style="width: 200px;">
+		<div class='row'>
+			<div class='col'  style='width: 200px;'>
 			<?= anchor('RegisterDoctor/new', 'Cadastrar', array( 
 					'class' => 'btn btn-success btn-lg btn-block',
 					
 					));
 				?></div>
-			<div class="col-8"></div>
-			<div class="col"  style="width: 200px;">
-			<?= anchor('Doctors/delete', 'Editar', array( 
+			<div class='col-8'></div>
+			<div class='col'  style='width: 200px;'>
+			<?= anchor('Doctors/edit', 'Editar', array( 
 					'class' => 'btn btn-danger btn-lg btn-block',)
 			); ?>
 				</div>

@@ -6,7 +6,7 @@
 	 //recebe todas as informações cadastradas em doctors.
 	public function getAllDoctors() {
 		return $this->db
-		->get("doctors")->result_array();
+		->get('doctors')->result_array();
 	}
 	
 

@@ -5,17 +5,17 @@ class Doctors extends CI_Controller {
 	
 	//recebe dados e armazendo am array, executa view com a lista de dados recebidas.
 		public function list(){
-			$this->load->model("List_model");
+			$this->load->model('List_model');
 			$list = $this-> List_model -> getAllDoctors();
-			$data = array("doctors" => $list);
+			$data = array('doctors' => $list);
 			$this->load->view('list/index', $data);
 		} 
 		
-		public function delete(){
-			$this->load->model("List_model");
+		public function edit(){
+			$this->load->model('List_model');
 			$list = $this-> List_model -> getAllDoctors();
-			$data = array("doctors" => $list);
-			$this->load->view('list/delete', $data);
+			$data = array('doctors' => $list);
+			$this->load->view('list/edit', $data);
 		} 
 		
 }

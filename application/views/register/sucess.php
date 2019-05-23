@@ -1,2 +1,2 @@
-<h4 class="text-center">Cadastrado com sucesso.</h4>
+<h4 class='text-center'>Cadastrado com sucesso.</h4>
 <br>

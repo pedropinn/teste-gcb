@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Maio-2019 às 16:26
+-- Generation Time: 23-Maio-2019 às 05:34
 -- Versão do servidor: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -5625,20 +5625,20 @@ CREATE TABLE IF NOT EXISTS `doctors` (
   `Crm` varchar(13) NOT NULL,
   `Name` varchar(40) NOT NULL,
   `Phone` varchar(13) NOT NULL,
-  `State` varchar(20) DEFAULT NULL,
-  `City` varchar(35) DEFAULT NULL,
-  `Skill1` varchar(26) CHARACTER SET armscii8 DEFAULT NULL,
-  `Skill2` varchar(26) CHARACTER SET armscii8 DEFAULT NULL,
+  `State` char(2) NOT NULL,
+  `City` varchar(35) NOT NULL,
+  `Skill1` varchar(26) NOT NULL,
+  `Skill2` varchar(26) NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Crm` (`Crm`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
 
 --
 -- Extraindo dados da tabela `doctors`
 --
 
 INSERT INTO `doctors` (`Id`, `Crm`, `Name`, `Phone`, `State`, `City`, `Skill1`, `Skill2`) VALUES
-(1, '0000000000/SP', 'Nome Do Médico ', '11-99999-9999', 'São Paulo', 'São Paulo', 'Buco Maxilo', 'Clinica Medica');
+(1, '0000000000/SP', 'Nome Do Médico ', '11-99999-9999', 'SP', 'São Paulo', 'Buco Maxilo', 'Clinica Medica');
 
 -- --------------------------------------------------------
 
@@ -5650,7 +5650,7 @@ CREATE TABLE IF NOT EXISTS `skills` (
   `Id` int(2) NOT NULL AUTO_INCREMENT,
   `Skill` varchar(26) NOT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5573 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Extraindo dados da tabela `skills`

@@ -2,6 +2,6 @@
 	
 	//insere no db a variavel recebida em doctors.
 	public function saveDoctor($doctor){
-		$this->db->insert("doctors", $doctor);
+		$this->db->insert('doctors', $doctor);
 	}
 }

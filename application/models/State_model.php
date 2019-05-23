@@ -39,7 +39,7 @@
 			$skill = $this -> getAllSkills();
 	
 			foreach($skill -> result() as $skills) {
-				$options .= "<option value='{$skills->Id}'>{$skills->Skill}</option>".PHP_EOL;
+				$options .= "<option value='{$skills->Skill}'>{$skills->Skill}</option>".PHP_EOL;
 			}
 			return $options;
 		}
