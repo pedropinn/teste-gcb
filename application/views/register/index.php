@@ -24,7 +24,7 @@
 				'set_value' => 'crmValue',
 				'id' => 'crmId',
 				'class' => 'form-control',
-				'placeholder' => 'Digite seu CRM - Apenas números'
+				'placeholder' => 'Apenas números'
 			));?>
 		</div>
 	</div>
@@ -38,7 +38,7 @@
 				'id' => 'phoneId',
 				'class' => 'form-control',
 				'maxlength'   => '13',
-				'placeholder' => 'Digite seu Telefone'
+				'placeholder' => '00-90000-4444'
 		));
 		?> </div>
 					<div class='col-4'> 	 

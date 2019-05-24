@@ -1,6 +1,6 @@
 
-	<h1 class='text-center'> PÁGINA NÃO CONCLUIDA<br>	</h1>
-	<h4 class='text-center'> está com os controls e model desenvolvidos, entretanto não está realizando o update no db, não consegui indentificar o erro antes da entrega prevista. </h4>
+	<h1 class='text-center'> Alterar informações de <?= $doctor['Name']?>.<br>	</h1>
+	<h4 class='text-center'>  </h4>
 <div class='container'>
 	<div class=row> 
 		<div class='col-8'> 

@@ -37,7 +37,7 @@ class RegisterDoctor extends CI_Controller {
 		$this->load->view('register/sucess');
 	}
 
-	
+	 	//deletar .
 		public function delete($id){
 			$this->load->model('Post_model');
 			$this->Post_model->deleteDoctor($id);
@@ -57,8 +57,7 @@ class RegisterDoctor extends CI_Controller {
 
 		//busca informações db
 		public function edit(){
-			
-			$id = $this->input->get("Id");
+						$id = $this->input->get("Id");
 			$this->load->model('Post_model');
 			$doctor = $this->Post_model->returnId($id);
 			$data = array("doctor" => $doctor);

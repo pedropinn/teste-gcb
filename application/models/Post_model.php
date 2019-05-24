@@ -20,7 +20,7 @@
 
 	//salva edição 
 	public function saveEdit(){
-		$id = $this->input->post('Id');
+		$id = $this->input->post('idInput');
 		$doctor = array(
 			'Crm' => $this->input->post('crmInput'),
 			'Name' => $this->input->post('nameInput'),
