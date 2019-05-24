@@ -25,10 +25,10 @@
 			'Crm' => $this->input->post('crmInput'),
 			'Name' => $this->input->post('nameInput'),
 			'Phone' => $this->input->post('phoneInput'),
-			'State' => $this->input->post('stateSelect'),
-			'City' => $this->input->post('citySelect'),
-			'Skill1' => $this->input->post('skillSelect1'),
-			'Skill2' => $this->input->post('skillSelect2'), 
+			'State' => $this->input->post('stateInput'),
+			'City' => $this->input->post('cityInput'),
+			'Skill1' => $this->input->post('skill1Input'),
+			'Skill2' => $this->input->post('skill2Input'), 
 		);
 
 		$this->db->where('Id', $id);
