@@ -1,6 +1,6 @@
 ## Aplicação para cadastro, visualização e edição
 
-Sistema desenvolvido como teste, para vaga de estágio da empresa GCB Investimentos, foi solicitado uma interface web, onde se consuiga cadastrar, alterar, excluir e pesquisar.
+Sistema desenvolvido como teste, para vaga de estágio da empresa GCB Investimentos, foi solicitado uma interface web, onde se consiga cadastrar, alterar, excluir e pesquisar.
 
   
 
